@@ -1,1 +1,2 @@
 # fame
+nem értem
