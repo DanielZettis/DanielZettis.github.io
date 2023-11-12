@@ -1,3 +1,16 @@
+@font-face {
+	font-family: 'BrutalType';
+	src: url('BrutalType-Regular.eot');
+	src:
+	     url('BrutalType-Regular.eot?#iefix') format('embedded-opentype'),
+	     url('BrutalType-Regular.woff2') format('woff2'),
+	     url('BrutalType-Regular.woff') format('woff'),
+	     url('BrutalType-Regular.ttf') format('truetype'),
+	     url('BrutalType-Regular.svg#BrutalType') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 html{
 	--color-white: #e8e8e8;
 	--color-gray: #8f8f8f;
@@ -5,11 +18,26 @@ html{
 	--color-content: #2f2f2f;
 	--color-contentbg: #242424;
 	--color-hover: #0070e0;
-
+	
+	font-family: BrutalType;
+	margin: 0;
+	padding: 0;
+	display:flex; 
+	flex-direction:column; 
+	justify-content:center;
+	min-width: 300px;
+	min-height: 100px;
+	margin: 100px;
+	
 }
 
+a{
+	color: inherit;
+  	text-decoration: inherit;
+}
 
 body {
+	max-height: fit-content;
 	display: grid;
 	grid-template-columns: 300px 1.2fr 1fr;
 	grid-template-rows: 0.1fr 2.4fr 0.7fr;
@@ -19,7 +47,8 @@ body {
 		"header header header"
 		"nav main main"
 		"footer footer footer";
-	background-color: var(--color-bg)
+	background-color: var(--color-bg);
+	border: 1px solid black;
 	}
 
 	
@@ -27,7 +56,6 @@ body {
 header {
 	grid-area: header;
 	color: var(--color-white);
-	font-weight: 400;
 	text-align: center;
 	padding: 5px;
 	
@@ -37,25 +65,23 @@ header img{
 	width:20px;
 	border-radius: 50%;
 	float: left;
-	border:1px solid var(--color-bg); 
+	outline: 1px solid var(--color-bg); 
 }
 
 nav {
 	grid-area: nav;
-	
+	min-width: 300px;
 }
 
 main {
 	grid-area: main;
 	background-color: var(--color-contentbg);
 	display:flex;
-	
 	flex-wrap: wrap;
 }
 
 footer {
 	grid-area: footer;
-	background-color: var(--color-contentbg);
 }
 
 
@@ -65,20 +91,16 @@ body {
 }
 
 .card {
-	height: fit-content;
 	margin: 5px;
-	background-color: var(--color-content);
 	color: var(--color-gray);
 	display: flex;
 	flex-direction:column;
 	border-radius: 5px;
 	box-shadow:4px 4px 2px var(--color-bg);
+	background-color: var(--color-content);
+	max-width: 120px;
 	font-size: small;
-	
-	
   }
- 
- 
 
   .card:hover{
 	color: white;
@@ -86,66 +108,51 @@ body {
 	outline: 1px solid var(--color-hover);
   }
 
-  .version{
-
-	background-color: var(--color-content);
+  .content_version{
 	border-radius: 5px;
 	padding: 3px;
   }
 
-  .card:hover .version{
-	background-color: #0070e0;
-	
+  .card:hover .content_version{
+	background-color: var(--color-hover);
+	border-radius: 5px;
   }
 
-  span{
+  .content_name{
 	display: block;
 	text-wrap:wrap;
 	padding: 3px;
   }
-  
-  .card img{
-	height: 100px;
-  }
 
   img{
-	
-	max-height: 200px;
-	min-height: auto;
+	max-width: 100%;
+	border-radius: 5px;
+  }
+  .card img{
 	border-radius: 5px 5px 0 0;
-	
-	
   }
 
   .navcard{
-	height: 100px;
+	height: 92px;
 	margin: 10px;
 	background-color: var(--color-content);
 	color: var(--color-gray);
 	display: flex;
 	flex-direction:column;
 	border-radius: 5px;
-	box-shadow:3px 3px 3px var(--color-bg);
-	font-size: small;
-	overflow : hidden;
 	position: relative;
-	
-  }
-
-  .navcard img{
-	height: 100px;
 	
   }
 
   .navcard:hover{
 	background-color: var(--color-hover);
 	outline: 1px solid var(--color-hover);
-	
+	border-radius: 5px;
   }
 
   .overlay-text {
 	position: absolute;
-	top: 60%;
+	top: 50%;
 	background-color: none;
 	color:var(--color-gray);
 	text-shadow: 1px 1px 3px var(--color-bg);
@@ -153,3 +160,31 @@ body {
 	font-size: 20px; 
   }
 	
+  @media (width <= 620px){
+	html{
+		margin: 10px;
+		
+	}
+	body{
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+	}
+	main{
+		display:none;
+	}
+	img{
+		max-width: inherit;
+	}
+	nav{
+		margin: auto;
+		display: flex;
+	}
+
+	.navcard{
+		height: auto;
+		display: flex;
+		width: auto;
+		margin: 10%;
+	}
+
+  }
