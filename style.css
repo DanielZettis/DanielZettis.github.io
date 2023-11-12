@@ -1,56 +1,155 @@
+html{
+	--color-white: #e8e8e8;
+	--color-gray: #8f8f8f;
+	--color-bg: #1a1a1a;
+	--color-content: #2f2f2f;
+	--color-contentbg: #242424;
+	--color-hover: #0070e0;
+
+}
 
 
 body {
 	display: grid;
-	grid-template-columns: 0.8fr 1.2fr 1fr;
-	grid-template-rows: 0.1fr 2.4fr 0.5fr;
+	grid-template-columns: 300px 1.2fr 1fr;
+	grid-template-rows: 0.1fr 2.4fr 0.7fr;
 	gap: 0px 0px;
-	grid-auto-flow: row;
+	grid-auto-flow: column;
 	grid-template-areas:
 		"header header header"
 		"nav main main"
 		"footer footer footer";
-}
+	background-color: var(--color-bg)
+	}
+
+	
 
 header {
 	grid-area: header;
-	background-color: #1a1a1a;
+	color: var(--color-white);
+	font-weight: 400;
+	text-align: center;
+	padding: 5px;
+	
+}
+
+header img{
+	width:20px;
+	border-radius: 50%;
+	float: left;
+	border:1px solid var(--color-bg); 
 }
 
 nav {
 	grid-area: nav;
-	background-color: #1a1a1a;
+	
 }
 
 main {
 	grid-area: main;
-	background-color: #242424;
+	background-color: var(--color-contentbg);
+	display:flex;
+	
+	flex-wrap: wrap;
 }
 
 footer {
 	grid-area: footer;
-	background-color: #242424;
+	background-color: var(--color-contentbg);
 }
 
-html,
+
 body {
 	height: 100%;
 	margin: 0;
 }
 
-body * {
-	border: 1px solid red;
-	position: relative;
-}
+.card {
+	height: fit-content;
+	margin: 5px;
+	background-color: var(--color-content);
+	color: var(--color-gray);
+	display: flex;
+	flex-direction:column;
+	border-radius: 5px;
+	box-shadow:4px 4px 2px var(--color-bg);
+	font-size: small;
+	
+	
+  }
+ 
+ 
 
-body *:after {
-	content: attr(class);
+  .card:hover{
+	color: white;
+	background-color: var(--color-hover);
+	outline: 1px solid var(--color-hover);
+  }
+
+  .version{
+
+	background-color: var(--color-content);
+	border-radius: 5px;
+	padding: 3px;
+  }
+
+  .card:hover .version{
+	background-color: #0070e0;
+	
+  }
+
+  span{
+	display: block;
+	text-wrap:wrap;
+	padding: 3px;
+  }
+  
+  .card img{
+	height: 100px;
+  }
+
+  img{
+	
+	max-height: 200px;
+	min-height: auto;
+	border-radius: 5px 5px 0 0;
+	
+	
+  }
+
+  .navcard{
+	height: 100px;
+	margin: 10px;
+	background-color: var(--color-content);
+	color: var(--color-gray);
+	display: flex;
+	flex-direction:column;
+	border-radius: 5px;
+	box-shadow:3px 3px 3px var(--color-bg);
+	font-size: small;
+	overflow : hidden;
+	position: relative;
+	
+  }
+
+  .navcard img{
+	height: 100px;
+	
+  }
+
+  .navcard:hover{
+	background-color: var(--color-hover);
+	outline: 1px solid var(--color-hover);
+	
+  }
+
+  .overlay-text {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: grid;
-	align-items: center;
-	justify-content: center;
-}
+	top: 60%;
+	background-color: none;
+	color:var(--color-gray);
+	text-shadow: 1px 1px 3px var(--color-bg);
+	padding: 10px 20px; 
+	font-size: 20px; 
+  }
+	
