@@ -13,17 +13,12 @@
 }
 
 html {
-	display: inline-flex;
-	flex-direction: column;
-	justify-content: center;
-	
-	min-height: 10vh;
-	min-width: 30vh;
-	padding: 0;
+	height: fit-content;
 }
 
 a {
-	all: unset;
+	text-decoration: inherit;
+	color:inherit;
 	border-radius: inherit;
 }
 
@@ -39,7 +34,6 @@ body::backdrop {
 
 body {
 	color: #fff;
-	margin:5vh auto;
 	font-size: .875rem;
 	font-family: "Brutal Type", 'Courier New', Courier, monospace;
 	font-weight: 400;
@@ -47,10 +41,10 @@ body {
 	letter-spacing: .01em;
 	background-color: #141414;
 	border: 1px solid #333333;
-	/*width: 1210px;
-	height: 912px;*/
 	width: fit-content;
 	height: auto;
+	margin:auto;
+
 
 }
 
@@ -178,7 +172,9 @@ nav {
 	position: absolute;
 	bottom: 13px;
 	left: 19px;
-	font-size: 19px;
+	font-size: 20px;
+	font-weight: bold;
+	
 }
 
 .menu{
@@ -190,6 +186,9 @@ nav {
 	padding: 4px;
 	gap: 4px;
 	border-radius: 4px;
+	overflow: auto;
+	
+	
 }
 
 .menu_card {
@@ -207,7 +206,8 @@ nav {
 	position: absolute;
 	bottom: 13px;
 	left: 19px;
-	font-size: 19px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 /* MAIN */
@@ -234,29 +234,45 @@ main {
 	width: 102px;
 	font-size: smaller;
 	height: 153px;
-	
+	display: flex;
 	
 
 }
+
 .card img{
 	border-radius: 4px 4px 0 0;
-	min-width: 80%;
-	object-fit: cover;
+	
+	
 }
 
 img {
 	
-	max-width: 100%;
+	width: 100%;
 	border-radius: inherit;
 	border: inherit;
 }
-.content_name{
-	padding:  0 0 0 3px;
+
+.card_content{
+	position: relative;
+	padding:  4px 4px 4px 4px;
+	line-height: 1;
 	
 	
 }
+.content_name{
+	
+	position: absolute;
+	top: 0;
+	left: 4;
+	
+}
 .content_version{
-	padding:  0 0 3px 3px;
+	position: absolute;
+	top: 30px;
+	bottom: 0;
+	left: 4;
+	
+	
 	
 	
 }
@@ -267,15 +283,15 @@ aside {
 	background-color: #e5e5e5;
 	float: right;
 	width: 0%;
-	padding: 15px;
-	margin-top: 7px;
+	
+	
 	text-align: center;
 }
 
 section {
 	background-color: #e5e5e5;
-	padding: 15px;
-	margin-top: 7px;
+	
+	
 	text-align: center;
 	border: 1px solid black;
 }
