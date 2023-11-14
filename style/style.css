@@ -176,14 +176,14 @@ nav {
 
 .recent_projects>.overlay_text {
 	position: absolute;
-	bottom: 1rem;
-	left: 1rem;
-	font-size: large;
+	bottom: 13px;
+	left: 19px;
+	font-size: 19px;
 }
 
 .menu{
 	background-color: #1a1a1a;
-	
+	font-size: 19px;
 	display: flex;
 	flex-direction: column;
 	margin: 4px;
@@ -205,9 +205,9 @@ nav {
 }
 .menu_card>.overlay_text {
 	position: absolute;
-	bottom: 1rem;
-	left: 1rem;
-	font-size: large;
+	bottom: 13px;
+	left: 19px;
+	font-size: 19px;
 }
 
 /* MAIN */
