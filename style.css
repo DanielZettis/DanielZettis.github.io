@@ -1,31 +1,12 @@
-/*@font-face {
-	font-family: "Brutal";
-	font-display: swap;
-	font-weight: 300;
-	src: local("Brutal Light"), local("Brutal-Light"), url(./fonts/Brutal-Light.cc0166f5.woff2) format("woff2"), url(./fonts/Brutal-Light.8b2730fe.woff) format("woff")
-}
-
 @font-face {
-	font-family: "Brutal";
-	font-display: swap;
-	font-weight: 400;
-	src: local("Brutal Regular"), local("Brutal-Regular"), url(./fonts/Brutal-Regular.85a5d915.woff2) format("woff2"), url(./fonts/Brutal-Regular.48c79c95.woff) format("woff")
-}
-
-@font-face {
-	font-family: "Brutal";
-	font-display: swap;
-	font-weight: 500;
-	src: local("Brutal Medium"), local("Brutal-Medium"), url(./fonts/Brutal-Medium.df2da420.woff2) format("woff2"), url(./fonts/Brutal-Medium.435ce8ce.woff) format("woff")
-}
-
-@font-face {
-	font-family: "Brutal";
-	font-display: swap;
-	font-weight: 700;
-	src: local("Brutal Bold"), local("Brutal-Bold"), url(./fonts/Brutal-Bold.402a3847.woff2) format("woff2"), url(./fonts/Brutal-Bold.52f77778.woff) format("woff")
-}*/
-
+    font-family: 'Brutal Type';
+    src: local('Brutal Type Regular'), local('Brutal-Type-Regular'),
+        url('BrutalType.woff2') format('woff2'),
+        url('BrutalType.woff') format('woff'),
+        url('BrutalType.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
 
 * {
 	box-sizing: border-box;
@@ -60,7 +41,7 @@ body {
 	color: #fff;
 	margin: 0;
 	font-size: .875rem;
-	/*font-family: Brutal;*/
+	font-family: Brutal Type;
 	font-weight: 400;
 	line-height: 1.43;
 	letter-spacing: .01em;
