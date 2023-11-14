@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 300px; /* Set the height of your container */
+            border: 1px solid #ccc; /* Optional: Add border for visibility */
+        }
+
+        .top-left,
+        .bottom-left {
+            width: auto; /* Take up the full width of the container */
+            background-color: #ffcc00; /* Optional: Add background color for visibility */
+            padding: 10px; /* Optional: Add padding for content inside the div */
+        }
+
+        .bottom-left {
+            align-self: flex-start; /* Align the bottom-left div to the end of the container */
+            background-color: #66ccff; /* Optional: Add background color for visibility */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-left">
+            <!-- Content for the top-left div -->
+            Top Left
+        </div>
+
+        <div class="bottom-left">
+            <!-- Content for the bottom-left div -->
+            Bottom Left
+        </div>
+    </div>
+
+</body>
+</html>
