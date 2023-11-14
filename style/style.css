@@ -16,7 +16,7 @@ html {
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 5vb;
+	
 	min-height: 10vh;
 	min-width: 30vh;
 	padding: 0;
@@ -39,20 +39,23 @@ body::backdrop {
 
 body {
 	color: #fff;
-	margin: 0;
+	margin:5vh auto;
 	font-size: .875rem;
 	font-family: "Brutal Type", 'Courier New', Courier, monospace;
 	font-weight: 400;
 	line-height: 1.43;
 	letter-spacing: .01em;
 	background-color: #141414;
-	outline: 1px solid rgb(48, 48, 48);
+	border: 1px solid #333333;
+	/*width: 1210px;
+	height: 912px;*/
+	width: fit-content;
+	height: auto;
 
 }
 
 .container {
-	padding: calc(5vb);
-	
+	padding: 8px 12px 8px 12px ;
 	display: flex;
 	flex-direction: row;
 	background-color: #242424;
@@ -137,7 +140,7 @@ header {
 	display: flex;
 	color: white;
 	width: 100%;
-	height: 29px;
+	height: 35px;
 	box-sizing: border-box;
 	justify-content: space-between;
 	align-content: center;
@@ -150,13 +153,14 @@ header {
 /* NAV */
 nav {
 	flex: 0 1 300px;
-	margin: 10px;
+	margin: 4px;
 
 }
-.card:hover, .recent_projects:hover {
+.card:hover, .recent_projects:hover, .menu_card:hover{
 	outline: 1px solid #0070e0;
 	background-color: #0070e0;
 	color:#fff;
+	cursor: pointer;
 }
 .recent_projects {
 	width: 300px;
@@ -167,20 +171,43 @@ nav {
 	background-position: center;
 	background-size: 100%;
 	position: relative;
+	margin: 8px;
 }
 
 .recent_projects>.overlay_text {
 	position: absolute;
-	bottom: -10px;
-	left: 10px;
+	bottom: 1rem;
+	left: 1rem;
+	font-size: large;
 }
 
-.menu a {
-	background-color: #e5e5e5;
-	margin-top: 7px;
-	display: block;
-	width: 100%;
-	color: black;
+.menu{
+	background-color: #1a1a1a;
+	
+	display: flex;
+	flex-direction: column;
+	margin: 4px;
+	padding: 4px;
+	gap: 4px;
+	border-radius: 4px;
+}
+
+.menu_card {
+	width: 300px;
+	height: 100px;
+	border-radius: 4px;
+	background-image: url(/media/ancient.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	position: relative;
+	
+}
+.menu_card>.overlay_text {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	font-size: large;
 }
 
 /* MAIN */
@@ -189,24 +216,25 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	flex: auto;
-	padding: 10px 0 0 10px;
+	justify-content: flex-start;
+	align-content: baseline;
+	padding: 9px;
 	height: auto;
     
-    gap: 20px;
+    gap: 9px;
 	
 	
 }
 
 .card {
 	border-radius: 4px;
-	cursor: pointer;
 	color: #8f8f8f;
-	display:block;
 	box-shadow: 4px 4px 2px #1a1a1a;
 	background-color: #2f2f2f;
-	max-width: 102px;
+	width: 102px;
 	font-size: smaller;
-	max-height: 153px;
+	height: 153px;
+	
 	
 
 }
@@ -267,29 +295,37 @@ footer {
 }
 
 /* MEDIA */
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 580px) {
 
 	
-	.menu,
+	.menu_card,
 	main,
 	aside,
 	.recent_projects {
 		width: 100%;
-		padding-left: 0;
-		margin: 0;
+		
+		margin-left: auto;
+		margin-right: auto;
+		
+		
 	}
-
+	.recent_projects{
+		
+	}
 	nav {
 		justify-content: center;
+		
 	}
 
 	.container {
 		display: block;
+		
+		
 	}
 
 	html {
 		margin: 0;
-
+		
 	}
 
 	.footer {
