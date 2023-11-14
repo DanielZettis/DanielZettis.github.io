@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Brutal Type';
     src: local('Brutal Type Regular'), local('Brutal-Type-Regular'),
-        url('BrutalType.woff2') format('woff2'),
-        url('BrutalType.woff') format('woff'),
+        url('./fonts/BrutalType.woff2') format('woff2'),
+        url('./fonts/BrutalType.woff') format('woff'),
         url('BrutalType.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
@@ -41,7 +41,7 @@ body {
 	color: #fff;
 	margin: 0;
 	font-size: .875rem;
-	font-family: Brutal Type;
+	font-family: "Brutal Type", 'Courier New', Courier, monospace;
 	font-weight: 400;
 	line-height: 1.43;
 	letter-spacing: .01em;
@@ -73,6 +73,7 @@ body {
 	fill: white;
 	width: 16px;
 	height: 16px;
+	border-radius: 50%;
 }
 
 .app-title {
