@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" href="media/logo.jpg" />
-    <link href="./style/style.css" rel="stylesheet" title="Default Style" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style/style.css" title="Default Style" />
 </head>
 <title>Epic</title>
 
@@ -19,34 +20,39 @@
             </p>
         </div>
         <div class="controls">
-            <button class="btn-control hide"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
-                    aria-hidden="true" style="width: 10px; height: 10px;">
+            <button class="btn-control hide">
+                <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                    style="width: 10px; height: 10px;">
                     <path d="M0 11h24v2H0z"></path>
-                </svg></button>
-            <button class="btn-control min-max"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24"
-                    aria-hidden="true" style="width: 10px; height: 10px;">
+                </svg>
+            </button>
+            <button class="btn-control min-max">
+                <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                    style="width: 10px; height: 10px;">
                     <path d="M2 2h20L22 0H2z"></path>
                     <path d="M0 24h2L2 0H0z"></path>
                     <path d="M22 24h2L24 0H22z"></path>
                     <path d="M2 24h20L22 22H2z"></path>
-                </svg></button>
-            <a href="/index.html"><button class="btn-control close"><svg class="MuiSvgIcon-root" focusable="false"
-                        viewBox="0 0 24 24" aria-hidden="true"
+                </svg>
+            </button>
+            <a href="/index.html">
+                <button class="btn-control close">
+                    <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
                         style="width: 12px; height: 12px; transform: rotate(45deg);">
                         <path d="M13 0h-2v11H0v2h11v11h2V13h11v-2H13V0z"></path>
-                    </svg></button></a>
+                    </svg>
+                </button>
+            </a>
         </div>
     </header>
 
     <div class="container">
-        <nav>
+        <nav><!--start of nav-->
             <div class="recent_projects">
                 <div class="overlay_text">
                     <span>Recent Projects</span>
                 </div>
             </div>
-
-
             <div class="menu">
                 <a href="#">
                     <div class="menu_card">
@@ -77,18 +83,28 @@
                     </div>
                 </a>
             </div>
-        </nav>
+        </nav> <!--end of nav-->
         <main>
-            <div class="card">
-                <div class="image" style="background-image: url('./media/ulogo.png');">
-                </div>
-                <div class="content_title">
-                    Maximum of 20 character
-                </div>
-                <div class="content_version">
-                    Version
-                </div>
+            <div class="search">
+                <svg class="MuiSvgIcon-root" focusable="false" viewBox="-3 -3 20 20" aria-hidden="true"
+                    style="width: 20px; height: 20px; ">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+                <input class="search_bar" type="search" placeholder="Filter Projects..." />
             </div>
+            <a href="https://github.com/DanielZettis/DanielZettis.github.io">
+                <div class="card">
+                    <div class="image" style="background-image: url('./media/ulogo.png');">
+                    </div>
+                    <div class="content_title">
+                        Maximum of 20 character
+                    </div>
+                    <div class="content_version">
+                        Version
+                    </div>
+                </div>
+            </a>
 
             <a href="/gpt.html">
                 <div class="card">
@@ -126,10 +142,10 @@
                     </div>
                 </div>
             </a>
+        </main> <!--end of main-->
+    </div> <!--end of container-->
 
-    </div>
 
-    </main>
 
     <aside>
 

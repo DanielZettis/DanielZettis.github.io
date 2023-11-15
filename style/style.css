@@ -37,7 +37,8 @@ body::backdrop {
 body {
 	color: #fff;
 	font-size: .875rem;
-	font-family: "Brutal Type", 'Courier New', Courier, monospace;
+	font: 1rem "Fira Sans";
+	font-family: "Brutal Type";
 	font-weight: 400;
 	line-height: 1.43;
 	letter-spacing: .01em;
@@ -46,13 +47,13 @@ body {
 	width: fit-content;
 	height: auto;
 	margin: auto;
-	box-shadow: 0 0 100px black;
+	box-shadow: 0px 0px 4px 0px black;
 
 
 }
 
 .container {
-	padding: 4px 10px 4px 18px;
+	padding: 4px 16px 4px 8px;
 	display: flex;
 	flex-direction: row;
 	background-color: #242424;
@@ -173,7 +174,7 @@ nav {
 	background-position: center;
 	background-size: 100%;
 	position: relative;
-	margin: 8px;
+	margin:  4px 8px;
 }
 
 .recent_projects>.overlay_text {
@@ -221,7 +222,6 @@ nav {
 
 /* MAIN */
 main {
-
 	display: flex;
 	flex-wrap: wrap;
 	flex: auto;
@@ -232,6 +232,56 @@ main {
 	gap: 9px;
 }
 
+.search{
+
+	height: 20px;
+	width: 100%;
+	display: inline-flex;
+	color: #363636;
+	overflow: visible;
+	font-size: 1.5rem;
+	text-align: center;
+	border: 0;
+	outline: 0;
+	border-radius: 4px;
+	margin: 0;
+	position: relative;
+	align-items: center;
+	user-select: none;
+	vertical-align: middle;
+	justify-content: center;
+	text-decoration: none;
+	background-color: #0F0F0F;
+	border: 1px solid #353535;
+	outline: 1px solid #1d1d1d;
+	border-radius: 10px;
+	fill: #c0c0c0;
+}
+.search:hover{
+	outline: 1px solid #0070e0;
+	color: #fff;
+	fill: #fff;
+	
+}
+
+.search svg{
+	fill: inherit;
+	padding-right: 4px;
+}
+
+input[type="search"] {
+	border: none;
+	background: transparent;
+	color: inherit;
+	outline:none;
+}
+
+  input.search_bar {
+	width: 100%;
+	color: inherit;
+	
+  }
+
 .card {
 	display: flex;
 	flex-direction: column;
@@ -240,7 +290,8 @@ main {
 	border-radius: 4px;
 	overflow: hidden;
 	background-color: #2f2f2f;
-	box-shadow: 4px 4px 2px #1a1a1a;
+	box-shadow: 4px 4px 4px #1a1a1a;
+	color: #c0c0c0;
 
 }
 
@@ -253,6 +304,7 @@ main {
 
 .content_title {
 	font-size: 9px;
+	line-height: 1;
 	flex-grow: 1;
 	margin: 4px 4px 0px 4px;
 
@@ -313,7 +365,9 @@ footer {
 
 	}
 
-	.recent_projects {}
+	.recent_projects {
+		margin:auto;
+	}
 
 	nav {
 		justify-content: center;
