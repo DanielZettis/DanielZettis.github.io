@@ -4,39 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .container {
+        .card {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
-            height: 300px; /* Set the height of your container */
-            border: 1px solid #ccc; /* Optional: Add border for visibility */
+            width: 102px;
+            height: 153px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden; /* Ensure that content does not overflow */
         }
 
-        .top-left,
-        .bottom-left {
-            width: auto; /* Take up the full width of the container */
-            background-color: #ffcc00; /* Optional: Add background color for visibility */
-            padding: 10px; /* Optional: Add padding for content inside the div */
+        .image {
+            width: 102px;
+            height: 102px;
+            background-size: cover;
+            background-position: center;
         }
 
-        .bottom-left {
-            align-self: flex-start; /* Align the bottom-left div to the end of the container */
-            background-color: #66ccff; /* Optional: Add background color for visibility */
+        .title {
+            font-size: 9px;
+            margin: 4px;
+            flex-grow: 1; /* Allow the title to grow and take available space */
+        }
+
+        .version {
+            font-size: 9px;
+            text-align: left;
+            margin: 4px;
+             /* Align the version to the bottom */
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="top-left">
-            <!-- Content for the top-left div -->
-            Top Left
+    <div class="card">
+        <div class="image" style="background-image: url('./media/CropoutSampleProject.png');">
+            <!-- You can replace 'your-image-url.jpg' with the actual image URL -->
         </div>
 
-        <div class="bottom-left">
-            <!-- Content for the bottom-left div -->
-            Bottom Left
+        <div class="title">
+            <!-- Title content goes here -->
+            The quick brown fox jumps over the lazy dog
+        </div>
+
+        <div class="version">
+            <!-- Version content goes here -->
+            Version
         </div>
     </div>
 
