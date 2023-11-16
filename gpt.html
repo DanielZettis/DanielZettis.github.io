@@ -4,53 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .card {
-            display: flex;
-            flex-direction: column;
-            width: 102px;
-            height: 153px;
+        /* Hide the radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Style for the label representing the custom radio buttons */
+        .custom-radio {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        /* Style for the actual custom radio button */
+        .custom-radio input[type="radio"]+span {
+            width: 15px;
+            height: 15px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            overflow: hidden; /* Ensure that content does not overflow */
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            top: 4px;
         }
 
-        .image {
-            width: 102px;
-            height: 102px;
-            background-size: cover;
-            background-position: center;
+        /* Style for the checked custom radio button */
+        .custom-radio input[type="radio"]:checked+span {
+            background-color: #3498db;
         }
 
-        .title {
-            font-size: 9px;
-            margin: 4px;
-            flex-grow: 1; /* Allow the title to grow and take available space */
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
 
-        .version {
-            font-size: 9px;
-            text-align: left;
-            margin: 4px;
-             /* Align the version to the bottom */
+        /* Show dropdown content when a radio button is checked */
+        input[type="radio"]:checked ~ .dropdown-content {
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="image" style="background-image: url('./media/CropoutSampleProject.png');">
-            <!-- You can replace 'your-image-url.jpg' with the actual image URL -->
-        </div>
+    <div class="dropdown">
+        <!-- Radio buttons for dropdown options -->
+        <label class="custom-radio">
+            <input type="radio" name="dropdown" />
+            <span></span>
+            Option 1
+            <!-- Your dropdown content for Option 1 goes here -->
+            <div class="dropdown-content">
+                Content for Option 1
+            </div>
+        </label>
 
-        <div class="title">
-            <!-- Title content goes here -->
-            The quick brown fox jumps over the lazy dog
-        </div>
+        <label class="custom-radio">
+            <input type="radio" name="dropdown" />
+            <span></span>
+            Option 2
+            <!-- Your dropdown content for Option 2 goes here -->
+            <div class="dropdown-content">
+                Content for Option 2
+            </div>
+        </label>
 
-        <div class="version">
-            <!-- Version content goes here -->
-            Version
-        </div>
+        <label class="custom-radio">
+            <input type="radio" name="dropdown" />
+            <span></span>
+            Option 3
+            <!-- Your dropdown content for Option 3 goes here -->
+            <div class="dropdown-content">
+                Content for Option 3
+            </div>
+        </label>
     </div>
 
 </body>

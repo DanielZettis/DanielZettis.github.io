@@ -37,8 +37,7 @@ body::backdrop {
 body {
 	color: #fff;
 	font-size: .875rem;
-	font: 1rem "Fira Sans";
-	font-family: "Brutal Type";
+	font-family: "Brutal Type", "Roboto";
 	font-weight: 400;
 	line-height: 1.43;
 	letter-spacing: .01em;
@@ -46,7 +45,7 @@ body {
 	border: 1px solid #333333;
 	width: fit-content;
 	height: auto;
-	margin: auto;
+	margin: 5vh auto;
 	box-shadow: 0px 0px 4px 0px black;
 
 
@@ -174,7 +173,7 @@ nav {
 	background-position: center;
 	background-size: 100%;
 	position: relative;
-	margin:  4px 8px;
+	margin: 4px 8px;
 }
 
 .recent_projects>.overlay_text {
@@ -204,7 +203,7 @@ nav {
 	width: 300px;
 	height: 100px;
 	border-radius: 4px;
-	background-image: url(/media/ancient.jpg);
+	background-image: url(/media/ancient_ins.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -232,10 +231,14 @@ main {
 	gap: 9px;
 }
 
-.search{
-
-	height: 20px;
+.main_top {
 	width: 100%;
+	display: inline-flex;
+}
+
+.search {
+	height: 20px;
+	width: inherit;
 	display: inline-flex;
 	color: #363636;
 	overflow: visible;
@@ -243,28 +246,28 @@ main {
 	text-align: center;
 	border: 0;
 	outline: 0;
-	border-radius: 4px;
+	border-radius: 10px;
 	margin: 0;
 	position: relative;
 	align-items: center;
 	user-select: none;
-	vertical-align: middle;
 	justify-content: center;
 	text-decoration: none;
 	background-color: #0F0F0F;
 	border: 1px solid #353535;
 	outline: 1px solid #1d1d1d;
-	border-radius: 10px;
 	fill: #c0c0c0;
+
 }
-.search:hover{
+
+.search:hover {
+	border: 1px solid transparent;
 	outline: 1px solid #0070e0;
 	color: #fff;
 	fill: #fff;
-	
 }
 
-.search svg{
+.search svg {
 	fill: inherit;
 	padding-right: 4px;
 }
@@ -273,14 +276,118 @@ input[type="search"] {
 	border: none;
 	background: transparent;
 	color: inherit;
-	outline:none;
+	outline: none;
 }
 
-  input.search_bar {
+input.search_bar {
 	width: 100%;
 	color: inherit;
+
+}
+
+.main_controls {
+	display: block ruby;
+	height: 22px;
+	border: 0;
+	outline: 0;
+	margin: 0;
+	position: relative;
+	text-decoration: none;
+	border-radius: 4px;
+	fill: #c0c0c0;
+
+}
+
+.main_controls.filter,
+.refresh {
+	position: relative;
+	fill: #e5e5e5;
+	margin: 0 4px 0 4px;
+	border: 0;
+	position: relative;
+	align-items: center;
+	user-select: none;
+	vertical-align: middle;
+	justify-content: center;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.main_controls.filter:hover,
+.refresh:hover {
+	fill: #fff;
+	background-color: #383838;
+}
+
+.filter_content {
+	background-color: #383838;
+	min-width: 108px;	
+}
+
+.filter_dropdown{
+	display: none;
+	position: absolute;
+	background-color: #383838;
+	-webkit-transform: translate(flex,flex);
+			transform: translate(flex,flex);
+	width: fit-content;
+	white-space: nowrap;
+	padding: 8px 8px 8px 0;
+	border: 1px solid #484848;
+	
+}
+input[type="radio"] {
+	display: none;
 	
   }
+input[type="radio"] + label {
+	cursor: pointer;
+	padding: 0   0  0  20px;
+	position: relative;
+	padding-right: 100%;
+	
+	
+	
+	
+  }
+input[type="radio"] + label:before {
+	left: 4px;
+	top: 4px;
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: black;
+  }
+  input[type="radio"]:checked + label:before {
+	background: white;
+  }
+
+li{
+	cursor: pointer;
+	list-style-type: none;
+	width: 100%;
+	padding:  4px 0 4px 8px;
+	color:#fff;
+	
+}
+.dropdown-content ul,
+.dropdown-content li {
+  margin: 0;
+  padding: 0;
+}
+.dropdown-content ul {
+	list-style: none;
+  }
+.filter_dropdown li:hover{
+	background-color: #0070e0;
+	
+}
+
+.main_controls.filter:hover .filter_dropdown {
+	display:block;	
+}
 
 .card {
 	display: flex;
@@ -353,20 +460,23 @@ footer {
 /* MEDIA */
 @media only screen and (max-width: 580px) {
 
+	body {
+		margin: auto;
+	}
 
 	.menu_card,
 	main,
 	aside,
 	.recent_projects {
 		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
+
+		margin: 0 auto 0 auto;
 
 
 	}
 
 	.recent_projects {
-		margin:auto;
+		margin: auto;
 	}
 
 	nav {
