@@ -203,7 +203,6 @@ nav {
 	width: 300px;
 	height: 100px;
 	border-radius: 4px;
-	background-image: url(/media/ancient_ins.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -234,6 +233,7 @@ main {
 .main_top {
 	width: 100%;
 	display: inline-flex;
+	
 }
 
 .search {
@@ -286,7 +286,7 @@ input.search_bar {
 }
 
 .main_controls {
-	display: block ruby;
+	display: -webkit-box;
 	height: 22px;
 	border: 0;
 	outline: 0;
@@ -302,7 +302,8 @@ input.search_bar {
 .refresh {
 	position: relative;
 	fill: #e5e5e5;
-	margin: 0 4px 0 4px;
+	
+	padding: 0 4px 0 4px;
 	border: 0;
 	position: relative;
 	align-items: center;
@@ -319,21 +320,16 @@ input.search_bar {
 	background-color: #383838;
 }
 
-.filter_content {
-	background-color: #383838;
-	min-width: 108px;	
-}
-
 .filter_dropdown{
 	display: none;
 	position: absolute;
 	background-color: #383838;
-	-webkit-transform: translate(flex,flex);
-			transform: translate(flex,flex);
 	width: fit-content;
 	white-space: nowrap;
 	padding: 8px 8px 8px 0;
 	border: 1px solid #484848;
+	-webkit-transform: translate(-65px, 0);
+			transform: translate(-65px, 0);
 	
 }
 input[type="radio"] {
@@ -360,9 +356,10 @@ input[type="radio"] + label:before {
 	border-radius: 50%;
 	background: black;
   }
-  input[type="radio"]:checked + label:before {
+
+input[type="radio"]:checked + label:before {
 	background: white;
-  }
+}
 
 li{
 	cursor: pointer;
@@ -457,6 +454,10 @@ footer {
 	margin: auto;
 }
 
+@media only screen and (max-width: 1160px) {
+
+}
+
 /* MEDIA */
 @media only screen and (max-width: 580px) {
 
@@ -465,9 +466,9 @@ footer {
 	}
 
 	.menu_card,
-	main,
+	
 	aside,
-	.recent_projects {
+	.recent_projects{
 		width: 100%;
 
 		margin: 0 auto 0 auto;
@@ -475,6 +476,9 @@ footer {
 
 	}
 
+	.main_top{
+		margin: 4px 16px 4px 0;
+	}
 	.recent_projects {
 		margin: auto;
 	}
@@ -489,7 +493,7 @@ footer {
 		display: block;
 		padding: 4px;
 
-
+	
 
 	}
 
