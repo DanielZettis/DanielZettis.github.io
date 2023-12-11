@@ -1,137 +1,69 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            box-sizing: border-box;
-            height: fit-content;
-        }
-
-        header{
-            background-color:#e5e5e5;
-            padding:15px;
-            text-align:center;
-        }
-
-        nav {
-            float: left;
-            width: 20%;
-            text-align: center;
-        }
-
-        .menu a {
-            background-color: #e5e5e5;
-            padding: 8px;
-            margin-top: 7px;
-            display: block;
-            width: 100%;
-            color: black;
-        }
-
-        main {
-            float: left;
-            width: 60%;
-            padding: 0 20px;
-        }
-
-        aside {
-            background-color: #e5e5e5;
-            float: left;
-            width: 20%;
-            padding: 15px;
-            margin-top: 7px;
-            text-align: center;
-        }
-
-        section {
-            background-color: #e5e5e5;
-            padding: 15px;
-            margin-top: 7px;
-            text-align: center;
-            border: 1px solid black;
-        }
-
-        .recent_projects {
-            background-color: #e5e5e5;
-            padding: 8px;
-            margin-top: 7px;
-            color: black;
-            border: 1px solid black;
-
-        }
-
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1" />
+            <link rel="icon" href="media/logo.jpg" />
         
-
-        footer {
-            display: flex;
-            width: 100%;
-        }
-
-        @media only screen and (max-width: 620px) {
-            nav,
-            .menu,
-            main,
-            aside,
-            .recent_projects {
-                width: 100%;
-                box-sizing: border-box;
-                height: fit-content;
-                float:none;
-            }
-            
-
-            .footer {
-                display: block;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <h1>Hello World</h1>
-    </header>
-
-    <div>
-        <nav>
-            <div class="recent_projects">
-                <h2>About</h2>
-                <p>Lorem ipsum </p>
-            </div>
-            <div class="menu" style="overflow:overflow">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3s</a>
-                <a href="#">Link 4</a>
-            
-            </div>
-        </nav>
+            <link rel="stylesheet" href="./style/style3.css" title="Default Style" />
+            <title>Epic</title>
+        </head>
+    
+    <body>
+        
+        <!-- Main Content -->
         <main>
-            <h2>Lorum Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat.</p>
+            Main
+
+            <!-- Header -->
+            <header class="header">
+                Header
+                <p>
+                Lorem ipsum dolo    
+                </p>
+            </header>
+
+            <!-- Hero -->
+            <section class="hero">
+                Hero
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius.
+                </p>
+            </section>
+
+            <div class="flex-container">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    Sidebar                
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit periculum!
+                    </p>
+                </aside>
+                <!-- Content -->
+                <section class="content">
+                    Content
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius. At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Itaque quantum adiit periculum! ad honestatem enim illum omnem conatum suum referebat, non ad voluptatem. Ergo id est convenienter naturae vivere, a natura discedere. Esse enim quam vellet iniquus iustus poterat inpune. Tu enim ista lenius, hic Stoicorum more nos vexat. Duo Reges: constructio interrete.
+                    </p>
+                    <p>
+                        Quam ob rem tandem, inquit, non satisfacit? Haec quo modo conveniant, non sane intellego. Ita ceterorum sententiis semotis relinquitur non mihi cum Torquato, sed virtuti cum voluptate certatio. Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Quem ad modum quis ambulet, sedeat, qui ductus oris, qui vultus in quoque sit? Miserum hominem! Si dolor summum malum est, dici aliter non potest. Quo tandem modo? Ex rebus enim timiditas, non ex vocabulis nascitur. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Quod eo liquidius faciet, si perspexerit rerum inter eas verborumne sit controversia.
+                    </p>                
+                </section>
+
+                
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                Footer                
+                <p>
+                    Esse enim quam vellet iniquus iustus poterat inpune. Tu enim ista lenius, hic Stoicorum more nos vexat. Duo Reges: constructio interrete.
+                </p>
+            </footer>
+
         </main>
 
-        <aside>
-            <h2>About</h2>
-            <section>
-            <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-
-            </section>
-            <section>
-                <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </section>
-
-        </aside>
-
-        <footer style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright
-            w3schools.com</footer>
-    </div>
-</body>
-
+    </body>
 </html>

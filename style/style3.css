@@ -1,0 +1,76 @@
+:root {
+	all: unset;
+	font-size: clamp(16px, 2vw, 50px);
+}
+
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	color: #fff;
+}
+
+.flex-container {
+	justify-content: space-between;
+}
+
+
+aside,
+footer,
+header,
+main,
+section {
+	display: block;
+	margin: 0;
+	padding: 1.25rem;
+	border: 1px solid #000;
+	color: red;
+}
+
+main {
+	background: #000;
+}
+
+.header {
+	background: #03a9f4;
+}
+
+.hero {
+	background: gold;
+}
+
+.content {
+	flex: 1;
+	background: #129a22;
+}
+
+.sidebar {
+	flex: 0 1 20rem;
+	background: #673ab7;
+}
+
+.footer,
+.sidebar {
+	border: 1px solid #000;
+}
+
+.footer {
+	background: #616161;
+}
+
+@media screen and (min-width:640px) {
+	.flex-container {
+		display: flex;
+	}
+}
